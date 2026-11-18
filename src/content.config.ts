@@ -21,4 +21,22 @@ const blog = defineCollection({
     }),
 });
 
-export const collections = { blog };
+// The changelog at /changelog: one Markdown file per version in
+// src/content/changelog/ (1.0.md, 1.1.md…), newest first by date. Each has an
+// optional picture under its summary.
+const changelog = defineCollection({
+  loader: glob({ base: "./src/content/changelog", pattern: "**/*.md" }),
+  schema: ({ image }) =>
+    z.object({
+      // "1.0", "1.1", "1.1.2".
+      version: z.string().regex(/^\d+\.\d+(\.\d+)?$/),
+      date: z.coerce.date(),
+      title: z.string(),
+      // The line under the title, before the details.
+      summary: z.string(),
+      image: image().optional(),
+      imageAlt: z.string().optional(),
+    }),
+});
+
+export const collections = { blog, changelog };

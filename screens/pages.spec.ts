@@ -11,6 +11,7 @@ const PAGES: [string, string][] = [
   ["split-trip-costs", "/split-trip-costs"],
   ["share-travel-tips", "/share-travel-tips"],
   ["blog", "/blog"],
+  ["changelog", "/changelog"],
   ["contact", "/contact"],
   ["privacy", "/privacy"],
   ["terms", "/terms"],

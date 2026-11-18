@@ -44,6 +44,13 @@ built from the Dockside `astro-website-template`, deployed to Cloudflare Workers
   the blog" on a feature page by linking to it in its text, e.g. `[your travel map](/travel-map)`.
   Its link preview is its hero photo cropped to 1200×630. Pages: `src/pages/blog/`; helpers:
   `src/lib/blog.ts`; RSS at `/rss.xml` once `url` is set (`src/pages/[feed].xml.ts`).
+- Changelog (`/changelog`, linked in the footer): one Markdown file per version in
+  `src/content/changelog/`, named for it (`1.0.md`, `1.1.md`). The header has `version`, `date`,
+  `title`, a one-line `summary` and an optional `image` with `imageAlt`; the text under it is the
+  details (short `###` headings and bullets). The newest is shown in full with NEW; earlier ones
+  are folded under "Earlier updates" (date, version, title and summary showing). Each has its own
+  address, `/changelog#v1-0`, which opens it. Page: `src/pages/changelog.astro`; helpers:
+  `src/lib/changelog.ts`.
 - `src/components/PageHero.astro`: the hero of every page but the home page (feature pages, the
   blog and its posts, Contact, Privacy, Terms, not found): the lake photo behind the nav, the
   title in white, a torn edge into the page. Each page passes its own slice of the photo.
@@ -75,5 +82,9 @@ from the page around them.
       change both together when the plans are set
 - [ ] Re-take the app screenshots in `src/assets/` (`app-*.png`, from the demo account, light, its
       demo strip hidden) when the app's look changes
+- [ ] **Nav and footer: decide what each should show, then update them.** Today the nav
+      (`Navigation`) has the Features menu (four feature pages), Blog, Contact, Try the demo, Log in
+      and Get Started; the footer (`Footer.astro`) has the four feature pages, Blog and Changelog
+      above the usual row. Changelog is only in the footer
 - [ ] The template's launch list still applies: custom domain on the Worker, `workers_dev: false`,
       Search Console, analytics
