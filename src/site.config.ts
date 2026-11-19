@@ -107,8 +107,10 @@ export const site = {
   // ---------------------------------------------------------------------------
 
   app: {
-    // No trailing slash. Change to https://app.<domain> once the custom domain is live.
-    url: "https://travel-app.riley-50f.workers.dev",
+    // No trailing slash.
+    url: "https://app.pinsandpostcards.com",
+    // The read-only demo's own address (the same app, on its own host).
+    demoUrl: "https://demo.pinsandpostcards.com",
   },
 
   // Rarely changed

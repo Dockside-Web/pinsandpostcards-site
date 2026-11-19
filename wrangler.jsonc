@@ -2,6 +2,11 @@
   //UPDATE THIS FOR EVERY NEW WEBSITE
   "name": "travel-site",
   "compatibility_date": "2026-03-24",
+  // Only its own address (pinsandpostcards.com, a custom domain on the Worker): no
+  // workers.dev address and no per-version preview addresses. Left out, a deploy
+  // would turn them back on.
+  "workers_dev": false,
+  "preview_urls": false,
   "assets": {
     "directory": "./dist",
     "not_found_handling": "404-page"
