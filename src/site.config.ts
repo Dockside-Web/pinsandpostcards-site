@@ -13,7 +13,7 @@ export const site = {
   // ---------------------------------------------------------------------------
 
   // Business name as it should appear in Google. e.g. "Sweet Caroline Seaport"
-  name: "Travel Map & Journal",
+  name: "Pins & Postcards",
   // Short phrase used in the homepage title: "Name | Tagline"
   tagline: "Your Travels, Beautifully Mapped",
   // Fallback meta description if a page doesn't pass one. 140-160 characters.
@@ -30,10 +30,10 @@ export const site = {
   // Full legal name for the copyright/schema. e.g. "Sweet Caroline Seaport, LLC"
   legalName: "Dockside Web Solutions, LLC",
   // Mobile browser bar color + manifest. Usually the main brand color. e.g. "#1e40af"
-  themeColor: "#17324d",
+  themeColor: "#3f5e57",
   // Social share image in /public, 1200x630.
-  ogImage: "/og-default.jpg",
-  ogImageAlt: "Travel Map & Journal: Your travels, beautifully mapped. The app's world map beside a mountain lake.",
+  ogImage: "/og-default.png",
+  ogImageAlt: "Pins & Postcards: the logo, the name on a tilted cream card, on sage.",
   // Square logo in /public, used by Google. e.g. "/logo.png"
   logo: "/icon-512.png",
 

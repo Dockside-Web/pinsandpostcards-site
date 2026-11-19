@@ -20,7 +20,7 @@ const basinURL = basinId.startsWith("http") ? basinId : `https://usebasin.com/f/
 const siteKey = site.forms.turnstileSiteKey || (import.meta.env.DEV ? "1x00000000000000000000AA" : "");
 
 const input =
-  "w-full rounded-xl border border-line bg-white px-4 py-3 font-ui text-base text-ink outline-none transition-colors placeholder:text-muted/70 focus:border-slate focus:ring-2 focus:ring-slate/25";
+  "w-full rounded-xl border border-line bg-white px-4 py-3 font-ui text-base text-ink outline-none transition-colors placeholder:text-muted/70 focus:border-sage focus:ring-2 focus:ring-sage/25";
 const label = "mb-1.5 block font-ui text-[0.95rem] font-semibold text-ink";
 ---
 
@@ -70,7 +70,7 @@ const label = "mb-1.5 block font-ui text-[0.95rem] font-semibold text-ink";
         data-error-callback="contactExpired"
       />
     ) : (
-      <p class="rounded-xl border border-line bg-fog px-4 py-3 font-ui text-[0.95rem] text-body">The contact form isn't switched on yet.</p>
+      <p class="rounded-xl border border-line bg-mist px-4 py-3 font-ui text-[0.95rem] text-body">The contact form isn't switched on yet.</p>
     )
   }
 
@@ -85,7 +85,7 @@ const label = "mb-1.5 block font-ui text-[0.95rem] font-semibold text-ink";
     type="submit"
     id="contact-send"
     disabled
-    class="inline-flex min-h-12 cursor-pointer items-center justify-center rounded-full bg-sand px-8 font-ui text-[1.05rem] font-semibold text-ink transition-all hover:-translate-y-0.5 hover:bg-sand-light active:scale-95 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 disabled:active:scale-100"
+    class="inline-flex min-h-12 cursor-pointer items-center justify-center rounded-full bg-cta px-8 font-ui text-[1.05rem] font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-cta-deep active:scale-95 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 disabled:active:scale-100"
   >
     Send message
   </button>

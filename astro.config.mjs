@@ -43,22 +43,24 @@ export default defineConfig({
   //   fallbacks: ["system-ui", "sans-serif"],
   // },
   fonts: [
+    // The brand's (the same as the app's): Outfit for everything, no italic.
     {
       provider: fontProviders.google(),
-      name: "Source Serif 4",
-      cssVariable: "--font-serif",
-      weights: ["400 600"],
-      styles: ["normal", "italic"],
-      subsets: ["latin", "latin-ext"],
-      fallbacks: ["Georgia", "serif"],
-    },
-    {
-      provider: fontProviders.google(),
-      name: "Instrument Sans",
-      cssVariable: "--font-sans",
-      weights: ["400 600"],
+      name: "Outfit",
+      cssVariable: "--font-outfit",
+      weights: ["400 800"],
       styles: ["normal"],
       subsets: ["latin", "latin-ext"],
+      fallbacks: ["system-ui", "sans-serif"],
+    },
+    // Only the wordmark's "&" (Wordmark).
+    {
+      provider: fontProviders.google(),
+      name: "Plus Jakarta Sans",
+      cssVariable: "--font-jakarta",
+      weights: [800],
+      styles: ["normal"],
+      subsets: ["latin"],
       fallbacks: ["system-ui", "sans-serif"],
     },
   ],

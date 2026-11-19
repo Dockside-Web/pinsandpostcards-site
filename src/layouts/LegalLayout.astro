@@ -29,13 +29,13 @@ const { email } = site.business;
   <div class="px-4 py-12 sm:px-6 md:py-16 lg:px-8">
     <div class="legal mx-auto max-w-4xl overflow-hidden rounded-2xl bg-white shadow-[0_24px_50px_-30px_rgba(35,49,61,0.45)]">
       <div class="space-y-10 px-6 py-8 sm:px-10 sm:py-10">
-        <div class="rounded-r-lg border-l-4 border-slate bg-fog px-4 py-3.5">
-          <p class="font-ui text-sm font-semibold text-ink">Last updated: <span class="text-slate">{updated}</span></p>
+        <div class="rounded-r-lg border-l-4 border-sage bg-mist px-4 py-3.5">
+          <p class="font-ui text-sm font-semibold text-ink">Last updated: <span class="text-sage">{updated}</span></p>
         </div>
 
         <slot />
 
-        <section class="rounded-xl border border-line bg-linen p-6">
+        <section class="rounded-xl border border-line bg-cream p-6">
           <h2>Contact us</h2>
           <p class="text-lg font-semibold text-ink">{site.legalName}</p>
           <p>Email: <a href={`mailto:${email}`}>{email}</a></p>
@@ -92,18 +92,18 @@ const { email } = site.business;
     margin-top: 0.85rem;
   }
   .legal :global(a) {
-    color: var(--color-slate);
+    color: var(--color-sage);
     text-decoration: underline;
     text-underline-offset: 2px;
   }
   .legal :global(a:hover) {
-    color: var(--color-slate-deep);
+    color: var(--color-sage-deep);
   }
   .legal :global(.note) {
     margin-top: 0.85rem;
-    border: 1px solid #cfdbe2;
+    border: 1px solid #d3ddd8;
     border-radius: 0.6rem;
-    background: var(--color-fog);
+    background: var(--color-mist);
     padding: 0.8rem 1rem;
   }
   .legal :global(.note p) {

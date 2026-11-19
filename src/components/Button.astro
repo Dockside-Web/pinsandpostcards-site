@@ -1,9 +1,9 @@
 ---
 interface Props {
   href: string;
-  // sand: the main call to action. slate: the second one on light
+  // cta: the main call to action (terracotta). sage: the second one on light
   // backgrounds. outline: the second one over a photo.
-  variant?: "sand" | "slate" | "outline";
+  variant?: "cta" | "sage" | "outline";
   size?: "sm" | "md" | "lg";
   // Adds the → after the label.
   arrow?: boolean;
@@ -12,11 +12,11 @@ interface Props {
   class?: string;
 }
 
-const { href, variant = "sand", size = "md", arrow = false, rel, class: className } = Astro.props;
+const { href, variant = "cta", size = "md", arrow = false, rel, class: className } = Astro.props;
 
 const variants = {
-  sand: "bg-sand text-ink hover:bg-sand-light",
-  slate: "bg-slate text-white hover:bg-slate-deep",
+  cta: "bg-cta text-white hover:bg-cta-deep",
+  sage: "bg-sage text-white hover:bg-sage-deep",
   outline: "border-2 border-white/85 text-white hover:bg-white/10",
 };
 

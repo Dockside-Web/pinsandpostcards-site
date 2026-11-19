@@ -1,7 +1,7 @@
 ---
 // The costs band. Follows Sharing, whose last item ("your travel crew, costs
 // included") leads into it, and shows the same Lisbon & Porto trip. Torn at
-// both ends: out of Sharing's fog at the top, into the demo's fog below.
+// both ends: out of Sharing's mist at the top, into the demo's mist below.
 import AppWindow from "../AppWindow.astro";
 import Route from "./Route.astro";
 import MoreLink from "../MoreLink.astro";
@@ -9,12 +9,12 @@ import TornEdge from "./TornEdge.astro";
 import expenses from "../../assets/app-expenses.png";
 ---
 
-<section id="costs" class="relative bg-slate pt-28 pb-28 text-white md:pt-40 md:pb-40">
-  <TornEdge fill="#e9eef0" position="top" seed={41} />
+<section id="costs" class="relative bg-sage pt-28 pb-28 text-white md:pt-40 md:pb-40">
+  <TornEdge fill="#e6ece8" position="top" seed={41} />
   <div class="mx-auto flex max-w-7xl flex-wrap items-center gap-x-16 gap-y-12 px-4 sm:px-8">
     <div class="relative z-2 max-w-100 flex-[1_1_21rem]">
-      <!-- The travel crew's sand pin, at the end of a dashed route above the heading -->
-      <Route class="-top-44 left-0 hidden lg:block" d="M10 10 C 20 70, 80 60, 100 100 S 150 120, 160 140" pinX={160} pinY={140} pin="sand" hole="#4a6a86" />
+      <!-- The travel crew's terracotta pin (edged in cream on the sage), at the end of a dashed route above the heading -->
+      <Route class="-top-44 left-0 hidden lg:block" d="M10 10 C 20 70, 80 60, 100 100 S 150 120, 160 140" pinX={160} pinY={140} pin="terracotta" hole="#3f5e57" outline />
       <h2 class="section-title text-white">Split the costs, not the friendship.</h2>
       <p class="text-white/88">
         Log what you paid in any currency. Split it equally, by shares or item by item, even with friends who never sign up. Everyone sees
@@ -33,5 +33,5 @@ import expenses from "../../assets/app-expenses.png";
       />
     </div>
   </div>
-  <TornEdge fill="#e9eef0" seed={29} />
+  <TornEdge fill="#e6ece8" seed={29} />
 </section>

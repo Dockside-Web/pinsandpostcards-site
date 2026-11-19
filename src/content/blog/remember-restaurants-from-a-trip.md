@@ -35,7 +35,7 @@ That last one matters more than it seems. A list of names is hard to use on your
 
 Keep restaurants together with the rest of the trip, not in a separate list. Then "where did we eat in Lisbon?" has a home, and you can see the meals next to the dates, the people you went with and what it all cost.
 
-That's how Travel Map & Journal works. Each spot on a trip keeps its stars, your note and what you'd order again, and lands as a pin on [your travel map](/travel-map). Favorite the few you'd go back for, and they come first.
+That's how Pins & Postcards works. Each spot on a trip keeps its stars, your note and what you'd order again, and lands as a pin on [your travel map](/travel-map). Favorite the few you'd go back for, and they come first.
 
 ## Make it searchable
 

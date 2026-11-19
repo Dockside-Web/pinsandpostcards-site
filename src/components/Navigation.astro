@@ -1,7 +1,6 @@
 ---
-import { site } from "../site.config";
 import { demoUrl, loginUrl, signupUrl } from "../lib/links";
-import Logo from "./Logo.astro";
+import Wordmark from "./Wordmark.astro";
 import Button from "./Button.astro";
 
 interface Props {
@@ -30,9 +29,8 @@ const here = Astro.url.pathname.replace(/\.html$/, "").replace(/(.)\/$/, "$1");
 
 <header class:list={["z-30 w-full text-white", overlay ? "absolute inset-x-0 top-0" : "bg-ink"]}>
   <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-8 md:py-6">
-    <a href="/" class="flex items-center gap-2.5 text-[1.35rem] font-medium whitespace-nowrap text-white no-underline sm:text-2xl md:text-[1.65rem]">
-      <Logo class="h-9 w-auto md:h-10" />
-      {site.name}
+    <a href="/" class="text-[1.35rem] leading-none no-underline sm:text-2xl md:text-[1.65rem]">
+      <Wordmark light />
     </a>
 
     <!-- Wide screens: Features (a menu), then the links in a row -->
@@ -40,7 +38,7 @@ const here = Astro.url.pathname.replace(/\.html$/, "").replace(/(.)\/$/, "$1");
       <div class="relative" data-features>
         <button
           type="button"
-          class="flex cursor-pointer items-center gap-1.5 text-white hover:text-sand aria-expanded:text-sand"
+          class="flex cursor-pointer items-center gap-1.5 text-white hover:text-sage-light aria-expanded:text-sage-light"
           aria-expanded="false"
           aria-controls="features-menu"
           data-features-button
@@ -53,7 +51,7 @@ const here = Astro.url.pathname.replace(/\.html$/, "").replace(/(.)\/$/, "$1");
         <ul
           id="features-menu"
           hidden
-          class="absolute top-full left-1/2 z-40 mt-4 grid w-80 -translate-x-1/2 gap-0.5 rounded-2xl bg-linen p-2 text-ink shadow-[0_24px_50px_-16px_rgba(0,0,0,0.45)]"
+          class="absolute top-full left-1/2 z-40 mt-4 grid w-80 -translate-x-1/2 gap-0.5 rounded-2xl bg-cream p-2 text-ink shadow-[0_24px_50px_-16px_rgba(0,0,0,0.45)]"
           data-features-menu
         >
           {
@@ -62,9 +60,9 @@ const here = Astro.url.pathname.replace(/\.html$/, "").replace(/(.)\/$/, "$1");
                 <a
                   href={f.href}
                   aria-current={here === f.href ? "page" : undefined}
-                  class="block rounded-xl px-4 py-3 whitespace-normal text-ink no-underline hover:bg-fog aria-[current=page]:bg-fog"
+                  class="block rounded-xl px-4 py-3 whitespace-normal text-ink no-underline hover:bg-mist aria-[current=page]:bg-mist"
                 >
-                  <span class="block font-serif text-[1.1rem] font-semibold">{f.label}</span>
+                  <span class="block font-headers text-[1.1rem] font-semibold">{f.label}</span>
                   <span class="block text-sm text-muted">{f.text}</span>
                 </a>
               </li>
@@ -74,12 +72,12 @@ const here = Astro.url.pathname.replace(/\.html$/, "").replace(/(.)\/$/, "$1");
       </div>
       {
         links.map((l) => (
-          <a href={l.href} rel={l.rel} aria-current={here === l.href ? "page" : undefined} class="text-white no-underline hover:text-sand aria-[current=page]:text-sand">
+          <a href={l.href} rel={l.rel} aria-current={here === l.href ? "page" : undefined} class="text-white no-underline hover:text-sage-light aria-[current=page]:text-sage-light">
             {l.label}
           </a>
         ))
       }
-      <a href={loginUrl} class="text-white no-underline hover:text-sand">Log in</a>
+      <a href={loginUrl} class="text-white no-underline hover:text-sage-light">Log in</a>
       <Button href={signupUrl} size="sm">Get Started</Button>
     </nav>
 
@@ -100,7 +98,7 @@ const here = Astro.url.pathname.replace(/\.html$/, "").replace(/(.)\/$/, "$1");
   </div>
 
   <nav id="mobile-menu" aria-label="Main" class="mx-4 mb-4 hidden rounded-2xl bg-ink/95 p-3 font-ui shadow-2xl backdrop-blur xl:hidden" data-menu>
-    <p class="px-4 pt-2 pb-1 text-xs font-semibold tracking-[0.14em] text-sand">FEATURES</p>
+    <p class="px-4 pt-2 pb-1 text-xs font-semibold tracking-[0.14em] text-sage-light">FEATURES</p>
     <ul class="grid border-b border-white/10 pb-2">
       {
         features.map((f) => (

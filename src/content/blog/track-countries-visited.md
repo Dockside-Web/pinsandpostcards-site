@@ -34,7 +34,7 @@ There are four common ways to do it. They all work; they differ in how much they
 
 If you only want the number, a note on your phone is fine. If you want to remember the trips behind the number (when you went, where you stayed, the place you'd go back to), keep the list somewhere that holds trips, not just ticks.
 
-That's how [the countries visited tracker](/countries-visited) in Travel Map & Journal works: add a trip and its country is ticked for you, and anything you've been to without a trip to show for it can be ticked by hand.
+That's how [the countries visited tracker](/countries-visited) in Pins & Postcards works: add a trip and its country is ticked for you, and anything you've been to without a trip to show for it can be ticked by hand.
 
 ![My World in the app: a map with every country visited shaded green, numbered pins on the cities, and 10 countries, 5 US states, 18 cities and 4 continents counted at the top](../../assets/app-my-world.png)
 

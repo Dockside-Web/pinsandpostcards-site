@@ -1,6 +1,6 @@
-# Travel Map & Journal (marketing site)
+# Pins & Postcards (marketing site)
 
-The public site for the Travel Map & Journal app (`../travel-app`). Static Astro 7 + Tailwind 4,
+The public site for the Pins & Postcards app (`../travel-app`). Static Astro 7 + Tailwind 4,
 built from the Dockside `astro-website-template`, deployed to Cloudflare Workers. Every "Log in",
 "Get started" and "Try the demo" is a plain link into the app.
 
@@ -17,8 +17,8 @@ built from the Dockside `astro-website-template`, deployed to Cloudflare Workers
 ## Where things are
 
 - `src/site.config.ts`: name, description, SEO, and `app.url` (where every app link goes).
-- `src/lib/links.ts`: the links into the app. "Try the demo" goes to the app's `/demo`, which signs
-  the visitor in to the read-only demo account.
+- `src/lib/links.ts`: the links into the app. "Try the demo" goes to the demo's own address
+  (`app.demoUrl`, demo.pinsandpostcards.com), which signs the visitor in to the read-only demo account.
 - `src/pages/index.astro`: the home page, one component per section in `src/components/home/`.
   The page follows one trip's life: the map in the hero, one trip's spots, all your trips,
   sharing, costs, then the demo. The nav (`Navigation`) goes to pages, not to sections: a
@@ -35,7 +35,7 @@ built from the Dockside `astro-website-template`, deployed to Cloudflare Workers
   - `Demo`: the demo account's real trips as photo cards, each with a passport stamp.
 - Feature pages: `src/pages/travel-map.astro`, `countries-visited.astro`, `split-trip-costs.astro`
   and `share-travel-tips.astro`, all on `src/layouts/FeatureLayout.astro` (heading and picture,
-  pinned points on fog, the page's own detail, blog posts that link to it, the demo, the closing
+  pinned points on mist, the page's own detail, blog posts that link to it, the demo, the closing
   band). Linked from the nav's Features menu and the footer.
 - Blog: one Markdown file per post in `src/content/blog/`; the file name is the address
   (`track-countries-visited.md` → `/blog/track-countries-visited`). The header fields are checked in
@@ -55,22 +55,22 @@ built from the Dockside `astro-website-template`, deployed to Cloudflare Workers
   blog and its posts, Contact, Privacy, Terms, not found): the lake photo behind the nav, the
   title in white, a torn edge into the page. Each page passes its own slice of the photo.
 - `src/components/CTA.astro`: the closing band, with the privacy promise and Get Started.
-- `src/styles/global.css`: the colours ("Misty harbour": slate blue, fog, linen, sand, ink) and
-  fonts (Source Serif 4, Instrument Sans, self-hosted through `astro.config.mjs`).
+- `src/styles/global.css`: the colours, the app's brand (sage, mist, cream, ink, and terracotta `cta`
+  only for the main button and `brand` for the logo's pin and "&") and fonts (Outfit, and Plus Jakarta
+  Sans for the wordmark's "&", self-hosted through `astro.config.mjs`). The name is always
+  `Wordmark`. The icons in `public/` and `og-default.png` are the app's, made there by
+  `npm run build:brand-images`: copy them over when they change.
 - `src/assets/`: photos and app screenshots, optimized at build time.
 - `screens/`: takes the screenshots (`pages.spec.ts` lists the pages; blog posts are found by
   themselves). A new page goes in its list. The pictures are never committed.
 
-The site is slate blue on purpose, not the app's green and cream: the screenshots should stand out
-from the page around them.
+The site and the app share one brand (the design canvas's "Final" artboards): the app's
+screenshots are of the app as it is now, light mode, from the demo account.
 
 ## Before launch
 
-- [ ] Demo: "Try the demo" needs the demo account in production (`npm run db:seed:remote` in
-      `travel-app`); without it the app's `/demo` is a 404
-- [ ] Domain: set `url` in `site.config.ts`; move the app to `app.<domain>` and update `app.url`
-- [ ] The link preview (`public/og-default.jpg`, from the "Site link preview options" canvas): redo
-      it once the app's final name and logo are decided
+- [ ] Domain: set `url` in `site.config.ts` (https://pinsandpostcards.com). The app's addresses
+      (`app.url`, `app.demoUrl`) are already on the domain
 - [ ] Photos are free Unsplash stock for now (hero lake, closing fjord, the five trip cards). Swap
       in your own when you have them
 - [ ] **Review the legal pages.** Privacy and Terms are live and in Google, but
@@ -86,5 +86,5 @@ from the page around them.
       (`Navigation`) has the Features menu (four feature pages), Blog, Contact, Try the demo, Log in
       and Get Started; the footer (`Footer.astro`) has the four feature pages, Blog and Changelog
       above the usual row. Changelog is only in the footer
-- [ ] The template's launch list still applies: custom domain on the Worker, `workers_dev: false`,
-      Search Console, analytics
+- [ ] The template's launch list: the custom domain and `workers_dev: false` are done; left are
+      Search Console and analytics

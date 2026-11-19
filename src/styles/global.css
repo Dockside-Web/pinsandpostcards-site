@@ -1,37 +1,40 @@
 @import "tailwindcss";
 
-/* Brand: "Misty harbour". Slate blue, fog and linen, with warm sand buttons,
-   Source Serif 4 for words and Instrument Sans for small interface-like text.
-   The app itself is green and cream; the site stays cool and blue so its
-   screenshots stand out from the page around them. */
+/* Brand: Pins & Postcards, the same as the app (../travel-app). Sage, cream and
+   one terracotta: the main button (`cta`, a shade deeper than the brand's #C8553D so
+   white text on it is readable) and the logo's pin and "&" (`brand`), nothing else.
+   Outfit for everything; Plus Jakarta Sans only for the wordmark's "&". */
 @theme {
-  --color-slate: #4a6a86; /* main colour: links, the costs band, secondary buttons */
-  --color-slate-deep: #3c5a74;
-  --color-fog: #e9eef0; /* tinted sections */
-  --color-linen: #f6f2ea; /* the page */
-  --color-sand: #d8b48a; /* main buttons, the board's label */
-  --color-sand-light: #e3c49f;
-  --color-ink: #23313d; /* headings, the board, the footer */
-  --color-body: #46525d;
-  --color-muted: #5f6a74;
-  --color-line: #dcd6cb;
-  --color-tile: #34485a; /* departure board tiles */
-  --color-tile-dark: #2d3f50;
+  --color-sage: #3f5e57; /* main colour: links, the costs band, second buttons */
+  --color-sage-deep: #2f4842;
+  --color-sage-light: #a9c8be; /* light text on the dark header and the board */
+  --color-mist: #e6ece8; /* tinted sections */
+  --color-cream: #f4f1ea; /* the page */
+  --color-cta: #b44a33; /* the main button, with white text */
+  --color-cta-deep: #9e3f2b;
+  --color-brand: #c8553d; /* the logo's pin and "&", pins on the page */
+  --color-ink: #22322e; /* headings, the board, the header, the footer */
+  --color-body: #3d4b47;
+  --color-muted: #5a6762;
+  --color-line: #e0dbd0;
+  --color-tile: #34514a; /* departure board tiles, a shade under the sage board */
+  --color-tile-dark: #2d4842;
 
-  /* App colours, for the hand-drawn app screens */
-  --color-app-paper: #f1ece2;
-  --color-app-line: #ddd5c6;
-  --color-app-muted: #62685f;
+  /* App colours, for the hand-drawn app screens (the app's own tokens) */
+  --color-app-paper: #f4f1ea;
+  --color-app-line: #e0dbd0;
+  --color-app-muted: #5a6762;
   --color-app-star: #e0a826;
   --color-app-eat: #a64f2c;
   --color-app-see: #666b3a;
   --color-app-drink: #7c4d5e;
   --color-app-shop: #5f5a94;
-  --color-app-green: #23544f;
+  --color-app-sage: #3f5e57;
 
-  --font-brand: var(--font-serif);
-  --font-headers: var(--font-serif);
-  --font-ui: var(--font-sans);
+  --font-brand: var(--font-outfit);
+  --font-headers: var(--font-outfit);
+  --font-ui: var(--font-outfit);
+  --font-amp: var(--font-jakarta);
 }
 
 /* Force hover to work on all devices (especially laptops with touchscreens) */
@@ -50,7 +53,7 @@
     width: 100%;
     font-family: var(--font-brand);
     color: var(--color-ink);
-    background: var(--color-linen);
+    background: var(--color-cream);
   }
 
   h1,
@@ -68,7 +71,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-sand);
+    outline: 2px solid var(--color-cta);
     outline-offset: 3px;
   }
 
@@ -103,11 +106,11 @@
   }
 
   .section-title {
-    @apply mb-5 text-4xl leading-[1.08] font-semibold tracking-[-0.01em] text-ink md:text-5xl;
+    @apply mb-5 text-4xl leading-[1.08] font-bold tracking-[-0.02em] text-ink md:text-5xl;
   }
 }
 
-/* Blog posts: the Markdown body. Source Serif at a comfortable reading size,
+/* Blog posts: the Markdown body. Outfit at a comfortable reading size,
    about 68 characters a line. Screenshots get the same paper frame and shadow
    as the home page's app windows. */
 @layer components {
@@ -140,7 +143,7 @@
       margin-top: 0.6em;
     }
     & a {
-      color: var(--color-slate-deep);
+      color: var(--color-sage-deep);
       text-decoration-thickness: 1px;
       text-underline-offset: 0.18em;
     }
@@ -165,19 +168,18 @@
       margin-top: 0.45em;
     }
     & li::marker {
-      color: var(--color-slate);
+      color: var(--color-sage);
     }
     & blockquote {
-      border-left: 3px solid var(--color-sand);
+      border-left: 3px solid var(--color-sage);
       padding-left: 1.2em;
-      font-style: italic;
       color: var(--color-ink);
     }
     & hr {
       margin: 3em auto;
       width: 5rem;
       border: 0;
-      border-top: 2px dashed #b9a07e;
+      border-top: 2px dashed #a3b2ac;
     }
     & img {
       display: block;
@@ -205,7 +207,7 @@
     }
     & code {
       font-size: 0.88em;
-      background: var(--color-fog);
+      background: var(--color-mist);
       padding: 0.1em 0.35em;
       border-radius: 4px;
     }

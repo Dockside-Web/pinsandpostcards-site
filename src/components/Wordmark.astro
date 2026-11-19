@@ -1,0 +1,23 @@
+---
+// The name as the logo writes it, the same as the app's (../travel-app,
+// src/components/Wordmark.astro): Outfit ExtraBold, a map pin for the dot on the
+// "i" and a terracotta "&" in Plus Jakarta Sans, on one line, its size from the
+// font size it's given. `light`: cream letters, for the dark header, the footer
+// and photos; otherwise sage. Screen readers get the name as plain text.
+interface Props {
+  light?: boolean;
+  class?: string;
+}
+const { light = false, class: className } = Astro.props;
+---
+
+<span class:list={["inline-block font-brand font-extrabold tracking-[-0.025em] whitespace-nowrap", light ? "text-cream" : "text-sage", className]}
+  ><span class="sr-only">Pins &amp; Postcards</span><span aria-hidden="true"
+    >P<span class="relative inline-block"
+      >ı<svg viewBox="0 0 30 42" class="absolute top-[-0.3em] left-1/2 -ml-[0.18em] h-[0.5em] w-[0.36em] overflow-visible"
+        ><path d="M15 1C7.3 1 1 7.3 1 15c0 10.5 14 26 14 26s14-15.5 14-26C29 7.3 22.7 1 15 1z" fill="#c8553d" stroke="currentColor" stroke-width="1.6"
+        ></path><circle cx="15" cy="15" r="5.5" fill="#f4f1ea"></circle></svg
+      ></span
+    >ns <span class="font-amp text-brand">&amp;</span> Postcards</span
+  ></span
+>

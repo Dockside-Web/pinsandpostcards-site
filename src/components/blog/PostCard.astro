@@ -16,7 +16,7 @@ interface Props {
 const { post, wide = false, index = 0, headingLevel: Heading = "h2" } = Astro.props;
 const { title, description, pubDate, hero, heroAlt } = post.data;
 
-const inks = ["#a64f2c", "#4a6a86", "#23313d"];
+const inks = ["#a64f2c", "#3f5e57", "#22322e"];
 const month = pubDate.toLocaleDateString("en-US", { month: "short", timeZone: "UTC" }).toUpperCase();
 const stamp: [string, string] = [`${month} ${pubDate.getUTCDate()}`, String(pubDate.getUTCFullYear())];
 ---
@@ -41,9 +41,9 @@ const stamp: [string, string] = [`${month} ${pubDate.getUTCDate()}`, String(pubD
     </p>
     <Heading class:list={["mb-3 leading-[1.12] font-semibold text-ink", wide ? "text-4xl md:text-[2.75rem]" : "text-[1.65rem]"]}>
       <!-- The link covers the whole card -->
-      <a href={`/blog/${post.id}`} class="text-ink no-underline after:absolute after:inset-0 group-hover:text-slate-deep">{title}</a>
+      <a href={`/blog/${post.id}`} class="text-ink no-underline after:absolute after:inset-0 group-hover:text-sage-deep">{title}</a>
     </Heading>
     <p class:list={["text-body", wide ? "text-xl" : "text-[1.05rem]"]}>{description}</p>
-    {wide && <p class="mt-6 font-ui font-semibold text-slate-deep">Read it <span aria-hidden="true">→</span></p>}
+    {wide && <p class="mt-6 font-ui font-semibold text-sage-deep">Read it <span aria-hidden="true">→</span></p>}
   </div>
 </article>

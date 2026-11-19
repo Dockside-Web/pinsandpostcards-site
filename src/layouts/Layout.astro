@@ -30,8 +30,8 @@ const hasAppleIcon = existsSync("public/apple-touch-icon.png");
     <script is:inline>document.documentElement.classList.add("js");</script>
     <SEO {...seo} />
 
-    <Font cssVariable="--font-serif" preload={[{ weight: "400", style: "normal" }]} />
-    <Font cssVariable="--font-sans" />
+    <Font cssVariable="--font-outfit" preload={[{ weight: "400", style: "normal" }]} />
+    <Font cssVariable="--font-jakarta" />
 
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -47,7 +47,7 @@ const hasAppleIcon = existsSync("public/apple-touch-icon.png");
     {/* Page-specific head tags: <Fragment slot="head">...</Fragment> */}
     <slot name="head" />
   </head>
-  <body class="flex min-h-screen flex-col overflow-x-clip bg-linen text-lg leading-relaxed antialiased">
+  <body class="flex min-h-screen flex-col overflow-x-clip bg-cream text-lg leading-relaxed antialiased">
     <a
       href="#main"
       class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:shadow-lg"

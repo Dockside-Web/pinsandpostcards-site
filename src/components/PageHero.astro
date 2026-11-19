@@ -25,7 +25,7 @@ interface Props {
   // Smaller type, for long titles (blog posts).
   long?: boolean;
 }
-const { title, lede, slice = "45%", fill = "#f6f2ea", seed = 23, stamp, long = false } = Astro.props;
+const { title, lede, slice = "45%", fill = "#f4f1ea", seed = 23, stamp, long = false } = Astro.props;
 const hasAside = Astro.slots.has("aside");
 ---
 
@@ -77,7 +77,7 @@ const hasAside = Astro.slots.has("aside");
     {
       stamp && !hasAside && (
         <div class="ml-auto hidden pr-6 md:block lg:pr-16">
-          <Stamp lines={stamp} ink="#23313d" tilt={9} class="scale-[1.45] shadow-[0_14px_30px_-10px_rgba(0,0,0,0.5)]" />
+          <Stamp lines={stamp} ink="#22322e" tilt={9} class="scale-[1.45] shadow-[0_14px_30px_-10px_rgba(0,0,0,0.5)]" />
         </div>
       )
     }

@@ -58,7 +58,7 @@ With more people and more expenses the arithmetic gets harder, but the idea's th
 
 ## Or let an app do it
 
-You can do all of this in a spreadsheet. If you'd rather not, [the trip expense splitter](/split-trip-costs) in Travel Map & Journal does it inside the trip itself: log each expense in any currency, split it equally, by shares, by percentages or item by item, and it works out the fewest payments to settle. Friends don't need an account to be part of the split, and each person sees the totals in their own currency.
+You can do all of this in a spreadsheet. If you'd rather not, [the trip expense splitter](/split-trip-costs) in Pins & Postcards does it inside the trip itself: log each expense in any currency, split it equally, by shares, by percentages or item by item, and it works out the fewest payments to settle. Friends don't need an account to be part of the split, and each person sees the totals in their own currency.
 
 ![The Expenses page for Lisbon & Porto: $2,963.74 spent, $1,487.42 as your share, $849.38 owed to you, and each expense listed in euros with its dollar value and who paid](../../assets/app-expenses.png)
 

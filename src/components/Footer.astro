@@ -1,4 +1,5 @@
 ---
+import Wordmark from "./Wordmark.astro";
 import { site } from "../site.config";
 import { demoUrl, loginUrl, signupUrl } from "../lib/links";
 
@@ -22,7 +23,7 @@ const pages = [
     </ul>
   </nav>
   <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-5 px-4 py-9 sm:px-8">
-    <a href="/" class="font-serif text-xl text-white no-underline">{site.name}</a>
+    <a href="/" class="text-xl leading-none no-underline"><Wordmark light /></a>
     <nav aria-label="Footer" class="flex flex-wrap gap-x-6 gap-y-2">
       <a href={signupUrl} class="text-white/75 hover:text-white">Get started</a>
       <a href={demoUrl} rel="nofollow" class="text-white/75 hover:text-white">Try the demo</a>
