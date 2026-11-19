@@ -16,7 +16,7 @@ const sitemapExclude = ["/404"];
 export default defineConfig({
   // Set `url` in src/site.config.ts
   site: site.url || undefined,
-  // The app's dev server (../travel-app) needs 4321 for logging in to work, so
+  // The app's dev server (../pinsandpostcards-app) needs 4321 for logging in to work, so
   // this one runs beside it on 4322.
   server: { port: 4322 },
   output: "static",

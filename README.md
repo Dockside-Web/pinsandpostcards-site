@@ -1,6 +1,6 @@
 # Pins & Postcards (marketing site)
 
-The public site for the Pins & Postcards app (`../travel-app`). Static Astro 7 + Tailwind 4,
+The public site for the Pins & Postcards app (`../pinsandpostcards-app`). Static Astro 7 + Tailwind 4,
 built from the Dockside `astro-website-template`, deployed to Cloudflare Workers. Every "Log in",
 "Get started" and "Try the demo" is a plain link into the app.
 
